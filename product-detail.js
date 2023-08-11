@@ -3,8 +3,7 @@ function renderProductDetail(product) {
         <div class="product-detail">
             <img src="${product.images[0]?.src}" alt="${product.name}">
             <h2>${product.name}</h2>
-            <p>${product.description}</p>
-            <p>Price: ${product.price_html}$</p>
+            <p>${product.description} Price: ${product.price_html}</p>
             <a href="index.html">Back to products</a>
         </div>
     `;
