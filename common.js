@@ -1,4 +1,4 @@
-const baseURL = 'http://plant-heaven.local/wp-json/wc/store/products';
+const baseURL = 'https://plant-heaven.local/wp-json/wc/store/products';
 
 function fetchProducts() {
     return fetch(baseURL)
