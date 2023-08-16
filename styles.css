@@ -99,7 +99,6 @@ h1 {
 
 /** Css code for featured products section **/
 
-/* Style for the featured product section */
 #featured-product {
     text-align: center;
     padding: 20px;
@@ -110,14 +109,34 @@ h1 {
 
 .featured-tag {
     background-color: #079e28;
-    color: white;
+    color: #ffd700;
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: bold;
     margin: 0 auto;
     margin-bottom: 1vh;
     max-width: 30rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: glowingText 2s infinite;
 }
+
+@keyframes glowingText {
+    0% {
+        opacity: 1;
+        text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        opacity: 0.8;
+        text-shadow: 2px 2px 16px rgba(255, 215, 0, 0.7);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+    }
+}
+
 
 .featured-product img {
     max-width: 31.25rem;
@@ -245,7 +264,3 @@ h1 {
     background-color: #0be052;
     color: white;
 }
-
-
-
-
