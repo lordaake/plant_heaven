@@ -2,12 +2,12 @@
 fetchProducts()
     .then(data => {
         let productsHTML = '';
-        let featuredProduct; // Declare a variable to store the featured product
+        let featuredProducts = []; // Declare an array to store the featured products
 
         data.forEach(product => {
             if (product.featured) {
-                // If the product is featured, store it as the featured product
-                featuredProduct = product;
+                // If the product is featured, add it to the featuredProducts array
+                featuredProducts.push(product);
             } else {
                 // If the product is not featured, add it to the productsHTML
                 productsHTML += `
@@ -24,9 +24,9 @@ fetchProducts()
             }
         });
 
-        // Display the featured product separately with a clear indication that it is featured
-        if (featuredProduct) {
-            document.getElementById('featured-product').innerHTML = `
+        // Display the featured products separately with a clear indication that they are featured
+        if (featuredProducts.length > 0) {
+            let featuredProductsHTML = featuredProducts.map(featuredProduct => `
             <div class="featured-product">
                 <div class="featured-tag">Featured</div>
                 <a class="image-link" href="product-detail.html?id=${featuredProduct.id}">
@@ -37,7 +37,9 @@ fetchProducts()
                 <p>Price: ${featuredProduct.price_html}$</p>
                 <a class="text-link" href="product-detail.html?id=${featuredProduct.id}">See Details</a>
             </div>
-            `;
+            `).join('');
+
+            document.getElementById('featured-product').innerHTML = featuredProductsHTML;
         }
 
         // Set the productsHTML to the products container

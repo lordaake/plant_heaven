@@ -101,10 +101,15 @@ h1 {
 
 #featured-product {
     text-align: center;
+    display: flex;
     padding: 20px;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     margin-bottom: 20px;
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .featured-tag {
