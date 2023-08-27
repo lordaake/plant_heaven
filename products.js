@@ -17,7 +17,7 @@ fetchProducts()
                     </a>
                     <h2>${product.name}</h2>
                     <p>${product.short_description}</p>
-                    <p>Price: ${product.price_html}$</p>
+                    <p>Price: ${product.price_html}</p>
                     <a class="text-link" href="product-detail.html?id=${product.id}">See Details</a>
                 </div>
                 `;
