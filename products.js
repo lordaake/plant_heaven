@@ -34,7 +34,7 @@ fetchProducts()
                 </a>
                 <h2>${featuredProduct.name}</h2>
                 <p>${featuredProduct.short_description}</p>
-                <p>Price: ${featuredProduct.price_html}$</p>
+                <p>Price: ${featuredProduct.price_html}</p>
                 <a class="text-link" href="product-detail.html?id=${featuredProduct.id}">See Details</a>
             </div>
             `).join('');
